@@ -1,0 +1,13 @@
+<mat-accordion multi ="true" *ngIf="bikes.length > 0">
+  <mat-expansion-panel *ngFor="let bike of bikes">
+    <mat-expansion-panel-header>
+      {{bike.name}}
+    </mat-expansion-panel-header>
+    <p>{{bike.content}}</p>
+    <mat-action-row>
+
+      <button mat-button color ="warn" (click)="onDelete(bike.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class ="info-text mat-body-1" *ngIf="bikes.length <= 0"> No bikes in the system.</p>

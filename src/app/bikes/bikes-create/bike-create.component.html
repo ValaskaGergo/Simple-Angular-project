@@ -1,0 +1,12 @@
+<mat-card>
+  <form (submit)="onAddBike(bikeForm)" #bikeForm="ngForm">
+<mat-form-field>
+  <input matInput type="text" name ="name" ngModel required placeholder="Bike name">
+</mat-form-field>
+<mat-form-field>
+<textarea matInput rows="6"  name="content" ngModel required placeholder="Bike parameters"></textarea>
+</mat-form-field>
+<button mat-raised-button color ="primary" type="submit">Save Bike</button>
+</form>
+</mat-card>
+<hr>

@@ -1,0 +1,22 @@
+<mat-toolbar color="accent"><span>MEAN Bike shop system</span>
+
+<ul>
+  <li *ngIf="userIsAuthenticated">
+    <a mat-button routerLink="/">Bikes</a>
+  </li>
+  <li *ngIf="userIsAuthenticated">
+    <a mat-button routerLink="/create">Add New Bike</a>
+  </li>
+  <li *ngIf="!userIsAuthenticated">
+    <a mat-button routerLink="/login">Login</a>
+  </li>
+  <li *ngIf="!userIsAuthenticated">
+    <a mat-button routerLink="/signup">Signup</a>
+  </li>
+  <li *ngIf="userIsAuthenticated">
+    <a mat-button (click) = "onLogout()">Logout</a>
+  </li>
+</ul>
+
+
+</mat-toolbar>
